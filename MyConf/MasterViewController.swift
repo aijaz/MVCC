@@ -16,40 +16,12 @@ struct SectionItem {
 
 class MasterViewController: UITableViewController {
 
-    var detailViewController: DetailViewController? = nil
     var objects = [Any]()
     var sessionTimeSlots = [SectionItem]()
-
-    let dateFormatter: DateFormatter = {
-        let d = DateFormatter()
-        d.dateFormat = "yyyyMMddHHmm"
-        d.doesRelativeDateFormatting = true
-        d.dateStyle = .short
-        d.timeStyle = .medium
-        return d
-    }()
-    let sectionHeaderDateFormatter: DateFormatter = {
-        let d = DateFormatter()
-        d.dateFormat = "EE, MMM d hh:mm a"
-        d.doesRelativeDateFormatting = true
-        d.dateStyle = .short
-        d.timeStyle = .medium
-        return d
-    }()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = editButtonItem
-
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
-        if let split = splitViewController {
-            let controllers = split.viewControllers
-            detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-        }
 
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.rightBarButtonItem = nil
