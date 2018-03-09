@@ -8,16 +8,10 @@
 
 import UIKit
 
-struct SectionItem {
-    var startTime: String
-    var sessions: [Session]
-}
-
-
 class MasterViewController: UITableViewController {
 
+    var coordinator: Coordinator?
     var detailViewController: DetailViewController? = nil
-    var objects = [Any]()
     var sessionTimeSlots = [SectionItem]()
 
     let dateFormatter: DateFormatter = {
@@ -41,11 +35,7 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        navigationItem.leftBarButtonItem = editButtonItem
 
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
-        navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -58,16 +48,14 @@ class MasterViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+        if let split = splitViewController {
+            clearsSelectionOnViewWillAppear = split.isCollapsed
+        }
         super.viewWillAppear(animated)
 
-        // Get data
-        Network.retrieveJsonAtLocation(urlString: "sampleJSONTiny") {
-            self.refresh()
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        }
+        // tell the coordinator that viewWillAppear
+        coordinator?.viewDidAppear()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +63,7 @@ class MasterViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func refresh() {
+    func refreshViewModels() {
         let allSessions = Session.allSessions()
         var currentIndex = -1
         var lastDateSeen = ""
@@ -93,10 +81,10 @@ class MasterViewController: UITableViewController {
         }
     }
 
-    func insertNewObject(_ sender: Any) {
-        objects.insert(NSDate(), at: 0)
-        let indexPath = IndexPath(row: 0, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
+    func refreshViews() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Segues
@@ -152,19 +140,6 @@ class MasterViewController: UITableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Header")!
@@ -182,4 +157,11 @@ class MasterViewController: UITableViewController {
     }
 
 }
+
+extension MasterViewController {
+    func attach(coordinator: Coordinator) {
+        self.coordinator = coordinator as? MasterCoordinator
+    }
+}
+
 

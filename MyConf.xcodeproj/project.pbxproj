@@ -39,6 +39,9 @@
 		B4B8FC6E1F3B4BD000807899 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4B8FC641F3B4BD000807899 /* 14.jpg */; };
 		B4B8FC701F3B90BF00807899 /* Licenses in Resources */ = {isa = PBXBuildFile; fileRef = B4B8FC6F1F3B90BF00807899 /* Licenses */; };
 		B4B8FC721F3B9CFF00807899 /* noun_1103053_cc.png in Resources */ = {isa = PBXBuildFile; fileRef = B4B8FC711F3B9CFF00807899 /* noun_1103053_cc.png */; };
+		B4FE11E020524164008CEC4B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11DF20524164008CEC4B /* CoordinatorProtocol.swift */; };
+		B4FE11E220524376008CEC4B /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E120524376008CEC4B /* MasterCoordinator.swift */; };
+		B4FE11E520524644008CEC4B /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E420524644008CEC4B /* SectionItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		B4B8FC641F3B4BD000807899 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = SOURCE_ROOT; };
 		B4B8FC6F1F3B90BF00807899 /* Licenses */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Licenses; path = MyConf/Licenses; sourceTree = SOURCE_ROOT; };
 		B4B8FC711F3B9CFF00807899 /* noun_1103053_cc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noun_1103053_cc.png; path = MyConf/noun_1103053_cc.png; sourceTree = SOURCE_ROOT; };
+		B4FE11DF20524164008CEC4B /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		B4FE11E120524376008CEC4B /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
+		B4FE11E420524644008CEC4B /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,10 @@
 		B40CBE951F2E61DE000E3814 = {
 			isa = PBXGroup;
 			children = (
+				B4FE11E320524615008CEC4B /* ViewModel */,
+				B4FE11DE20524103008CEC4B /* Coordinators */,
+				B4FE11DB205240B1008CEC4B /* DataSource */,
+				B4FE11DD205240DD008CEC4B /* Delegate */,
 				B40CBED61F2E8C3A000E3814 /* Network */,
 				B40CBED11F2E61E7000E3814 /* Model */,
 				B40CBEA01F2E61DE000E3814 /* MyConf */,
@@ -214,6 +224,37 @@
 				B40CBED71F2E8C58000E3814 /* Network.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B4FE11DB205240B1008CEC4B /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		B4FE11DD205240DD008CEC4B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		B4FE11DE20524103008CEC4B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE11DF20524164008CEC4B /* CoordinatorProtocol.swift */,
+				B4FE11E120524376008CEC4B /* MasterCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B4FE11E320524615008CEC4B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE11E420524644008CEC4B /* SectionItem.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,11 +413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FE11E520524644008CEC4B /* SectionItem.swift in Sources */,
 				B40CBED51F2E882E000E3814 /* Session.swift in Sources */,
 				B40CBEA61F2E61DE000E3814 /* DetailViewController.swift in Sources */,
 				B40CBED81F2E8C58000E3814 /* Network.swift in Sources */,
 				B40CBEA41F2E61DE000E3814 /* MasterViewController.swift in Sources */,
 				B40CBEA21F2E61DE000E3814 /* AppDelegate.swift in Sources */,
+				B4FE11E020524164008CEC4B /* CoordinatorProtocol.swift in Sources */,
+				B4FE11E220524376008CEC4B /* MasterCoordinator.swift in Sources */,
 				B40CBEFB1F37F330000E3814 /* SpeakerBioViewController.swift in Sources */,
 				B40CBEF91F34DC0C000E3814 /* Database.swift in Sources */,
 				B40CBED31F2E8792000E3814 /* Speaker.swift in Sources */,
