@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var coordinator: SessionCoordinator?
+
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var sessionNameLabel: UILabel!
@@ -17,56 +19,59 @@ class DetailViewController: UIViewController {
     @IBOutlet var speakerNameLabel: UILabel!
     @IBOutlet var bioButton: UIButton!
 
-    var session: Session! {
-        didSet {
-            configureView()
-        }
+    func readyToPopulateViews() -> Bool {
+        return (imageView != nil)
     }
-
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        guard let session = session else {
-            return 
-        }
-        if sessionNameLabel == nil {
-            return
-        }
-        sessionNameLabel.text = session.title
-        speakerNameLabel.text = session.speaker?.name
-        if let imagePath = session.speaker?.imagePath {
+    
+    func populateSessionImage(_ imagePath: String?) {
+        if let imagePath = imagePath {
             imageView.image = UIImage(named: imagePath)
+        }
+        else {
+            imageView.image = nil
         }
         imageView.layer.cornerRadius = imageView.frame.size.width/2
         imageView.clipsToBounds = true
+    }
 
-        let desc = session.sessionDescription ?? "Session Details Coming Soon"
+    func populateSessionName(_ sessionName: String?) {
+        sessionNameLabel.text = sessionName
+        bioButton.isHidden = (sessionName == nil)
+    }
+
+    func populateSessionDescription(_ sessionDescription: String?) {
+        let desc = sessionDescription ?? "Session Details Coming Soon"
         let attrStr = NSMutableAttributedString(string: desc)
         let font = UIFont(name: "AvenirNext-Medium", size: 18)
         attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
         sessionDescriptionLabel.attributedText = attrStr
-
-        bioButton.isHidden = (session.speaker == nil)
-
     }
+
+    func populateSpeakerName(_ speakerName: String?) {
+        speakerNameLabel.text = speakerName
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+        coordinator?.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showBio" {
-            let dest = segue.destination as! SpeakerBioViewController
-            dest.speaker = session.speaker
-        }
+        coordinator?.prepare(for: segue, sender: sender)
     }
 
 }
+
+
+extension DetailViewController {
+    func attach(coordinator: Coordinator) {
+        self.coordinator = coordinator as? SessionCoordinator
+    }
+}
+
 

@@ -36,10 +36,12 @@ class MasterCoordinator: NSObject, Coordinator {
         if segue.identifier == "showDetail" {
             if let indexPath = viewController?.tableView.indexPathForSelectedRow {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                let session = dataSource.sessionTimeSlots[indexPath.section].sessions[indexPath.row]
-                controller.session = session
                 controller.navigationItem.leftBarButtonItem = viewController?.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
+                let sessionCoordinator = SessionCoordinator()
+                sessionCoordinator.attach(viewController: controller)
+                let session = dataSource.sessionTimeSlots[indexPath.section].sessions[indexPath.row]
+                sessionCoordinator.session = session
             }
         }
     }

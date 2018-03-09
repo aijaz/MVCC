@@ -45,6 +45,7 @@
 		B4FE11E720526631008CEC4B /* MasterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E620526631008CEC4B /* MasterDataSource.swift */; };
 		B4FE11E920526898008CEC4B /* MasterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E820526898008CEC4B /* MasterDelegate.swift */; };
 		B4FE11EC2052FC63008CEC4B /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */; };
+		B4FE11EE2052FE16008CEC4B /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11ED2052FE16008CEC4B /* SessionCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		B4FE11E620526631008CEC4B /* MasterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDataSource.swift; sourceTree = "<group>"; };
 		B4FE11E820526898008CEC4B /* MasterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDelegate.swift; sourceTree = "<group>"; };
 		B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
+		B4FE11ED2052FE16008CEC4B /* SessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			children = (
 				B4FE11DF20524164008CEC4B /* CoordinatorProtocol.swift */,
 				B4FE11E120524376008CEC4B /* MasterCoordinator.swift */,
+				B4FE11ED2052FE16008CEC4B /* SessionCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				B40CBED51F2E882E000E3814 /* Session.swift in Sources */,
 				B40CBEA61F2E61DE000E3814 /* DetailViewController.swift in Sources */,
 				B40CBED81F2E8C58000E3814 /* Network.swift in Sources */,
+				B4FE11EE2052FE16008CEC4B /* SessionCoordinator.swift in Sources */,
 				B40CBEA41F2E61DE000E3814 /* MasterViewController.swift in Sources */,
 				B40CBEA21F2E61DE000E3814 /* AppDelegate.swift in Sources */,
 				B4FE11E020524164008CEC4B /* CoordinatorProtocol.swift in Sources */,
