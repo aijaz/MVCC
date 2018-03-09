@@ -41,33 +41,11 @@ class MasterDataSource: NSObject, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // TODO: Give the VM to the cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MasterTableViewCell
         let session = sessionTimeSlots[indexPath.section].sessions[indexPath.row]
-
-
-        let titleLabel = cell.contentView.viewWithTag(1) as! UILabel
-        let speakerLabel = cell.contentView.viewWithTag(2) as! UILabel
-        let imageView = cell.contentView.viewWithTag(3) as! UIImageView
-        imageView.layer.cornerRadius = (imageView.frame.size.height)/2
-        imageView.clipsToBounds = true
-
-
-        titleLabel.text = session.title
-        speakerLabel.text = session.speaker?.name ?? ""
-        if let imagePath = session.speaker?.imagePath {
-            imageView.image = UIImage(named: imagePath)
-        }
-        else {
-            imageView.image = nil
-        }
-
-        let bgColorView = UIView()
-        bgColorView.backgroundColor = UIColor(colorLiteralRed: 200/256.0, green: 200/256.0, blue: 193/256.0, alpha: 1.0)
-        cell.selectedBackgroundView = bgColorView
+        cell.populateWith(session: session)
 
         return cell
     }
-
 
 }

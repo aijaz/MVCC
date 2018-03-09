@@ -44,6 +44,7 @@
 		B4FE11E520524644008CEC4B /* SectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E420524644008CEC4B /* SectionItem.swift */; };
 		B4FE11E720526631008CEC4B /* MasterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E620526631008CEC4B /* MasterDataSource.swift */; };
 		B4FE11E920526898008CEC4B /* MasterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E820526898008CEC4B /* MasterDelegate.swift */; };
+		B4FE11EC2052FC63008CEC4B /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		B4FE11E420524644008CEC4B /* SectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionItem.swift; sourceTree = "<group>"; };
 		B4FE11E620526631008CEC4B /* MasterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDataSource.swift; sourceTree = "<group>"; };
 		B4FE11E820526898008CEC4B /* MasterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDelegate.swift; sourceTree = "<group>"; };
+		B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		B40CBE951F2E61DE000E3814 = {
 			isa = PBXGroup;
 			children = (
+				B4FE11EA2052FC3F008CEC4B /* Cells */,
 				B4FE11E320524615008CEC4B /* ViewModel */,
 				B4FE11DE20524103008CEC4B /* Coordinators */,
 				B4FE11DB205240B1008CEC4B /* DataSource */,
@@ -261,6 +264,14 @@
 				B4FE11E420524644008CEC4B /* SectionItem.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B4FE11EA2052FC3F008CEC4B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +439,7 @@
 				B4FE11E020524164008CEC4B /* CoordinatorProtocol.swift in Sources */,
 				B4FE11E220524376008CEC4B /* MasterCoordinator.swift in Sources */,
 				B4FE11E720526631008CEC4B /* MasterDataSource.swift in Sources */,
+				B4FE11EC2052FC63008CEC4B /* MasterTableViewCell.swift in Sources */,
 				B40CBEFB1F37F330000E3814 /* SpeakerBioViewController.swift in Sources */,
 				B40CBEF91F34DC0C000E3814 /* Database.swift in Sources */,
 				B4FE11E920526898008CEC4B /* MasterDelegate.swift in Sources */,
