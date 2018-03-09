@@ -38,6 +38,9 @@ class SessionCoordinator: NSObject, Coordinator {
         if segue.identifier == "showBio" {
             let dest = segue.destination as! SpeakerBioViewController
             dest.speaker = session.speaker
+            let coordinator = BioCoordinator()
+            coordinator.attach(viewController: dest)
+            coordinator.speaker = session.speaker
         }
     }
 

@@ -10,6 +10,9 @@ import UIKit
 
 class SpeakerBioViewController: UIViewController {
 
+    var coordinator: BioCoordinator?
+
+
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var speakerNameLabel: UILabel!
     @IBOutlet var twitterLabel: UILabel!
@@ -82,7 +85,15 @@ class SpeakerBioViewController: UIViewController {
             let dest = segue.destination as! SpeakerBioViewController
             dest.speaker = speaker
         }
+        coordinator?.prepare(for: segue, sender: sender)
     }
 
 
 }
+
+extension SpeakerBioViewController {
+    func attach(coordinator: Coordinator) {
+        self.coordinator = coordinator as? BioCoordinator
+    }
+}
+

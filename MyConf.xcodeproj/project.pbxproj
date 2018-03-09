@@ -46,6 +46,9 @@
 		B4FE11E920526898008CEC4B /* MasterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11E820526898008CEC4B /* MasterDelegate.swift */; };
 		B4FE11EC2052FC63008CEC4B /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */; };
 		B4FE11EE2052FE16008CEC4B /* SessionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11ED2052FE16008CEC4B /* SessionCoordinator.swift */; };
+		B4FE11F22053420F008CEC4B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11F02053420F008CEC4B /* ImageViewController.swift */; };
+		B4FE11F520534850008CEC4B /* ImageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11F420534850008CEC4B /* ImageCoordinator.swift */; };
+		B4FE11F7205349E4008CEC4B /* BioCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE11F6205349E4008CEC4B /* BioCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		B4FE11E820526898008CEC4B /* MasterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterDelegate.swift; sourceTree = "<group>"; };
 		B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 		B4FE11ED2052FE16008CEC4B /* SessionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCoordinator.swift; sourceTree = "<group>"; };
+		B4FE11F02053420F008CEC4B /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		B4FE11F420534850008CEC4B /* ImageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCoordinator.swift; sourceTree = "<group>"; };
+		B4FE11F6205349E4008CEC4B /* BioCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 		B40CBE951F2E61DE000E3814 = {
 			isa = PBXGroup;
 			children = (
+				B4FE11EF205341C6008CEC4B /* ViewControllers */,
 				B4FE11EA2052FC3F008CEC4B /* Cells */,
 				B4FE11E320524615008CEC4B /* ViewModel */,
 				B4FE11DE20524103008CEC4B /* Coordinators */,
@@ -257,6 +264,8 @@
 				B4FE11DF20524164008CEC4B /* CoordinatorProtocol.swift */,
 				B4FE11E120524376008CEC4B /* MasterCoordinator.swift */,
 				B4FE11ED2052FE16008CEC4B /* SessionCoordinator.swift */,
+				B4FE11F6205349E4008CEC4B /* BioCoordinator.swift */,
+				B4FE11F420534850008CEC4B /* ImageCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -275,6 +284,14 @@
 				B4FE11EB2052FC63008CEC4B /* MasterTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B4FE11EF205341C6008CEC4B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE11F02053420F008CEC4B /* ImageViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,6 +456,8 @@
 				B40CBED81F2E8C58000E3814 /* Network.swift in Sources */,
 				B4FE11EE2052FE16008CEC4B /* SessionCoordinator.swift in Sources */,
 				B40CBEA41F2E61DE000E3814 /* MasterViewController.swift in Sources */,
+				B4FE11F22053420F008CEC4B /* ImageViewController.swift in Sources */,
+				B4FE11F7205349E4008CEC4B /* BioCoordinator.swift in Sources */,
 				B40CBEA21F2E61DE000E3814 /* AppDelegate.swift in Sources */,
 				B4FE11E020524164008CEC4B /* CoordinatorProtocol.swift in Sources */,
 				B4FE11E220524376008CEC4B /* MasterCoordinator.swift in Sources */,
@@ -447,6 +466,7 @@
 				B40CBEFB1F37F330000E3814 /* SpeakerBioViewController.swift in Sources */,
 				B40CBEF91F34DC0C000E3814 /* Database.swift in Sources */,
 				B4FE11E920526898008CEC4B /* MasterDelegate.swift in Sources */,
+				B4FE11F520534850008CEC4B /* ImageCoordinator.swift in Sources */,
 				B40CBED31F2E8792000E3814 /* Speaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
