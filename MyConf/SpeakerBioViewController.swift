@@ -48,7 +48,7 @@ class SpeakerBioViewController: UIViewController {
             }
 
             if let website = speaker.website {
-                webLabel.text = "@\(website)"
+                webLabel.text = "http://\(website)"
             }
             else {
                 webLabel.removeFromSuperview()
