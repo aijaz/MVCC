@@ -29,7 +29,7 @@ class BioCoordinator: NSObject, Coordinator {
     }
 
     func configureView() {
-        // The contained view controllers do some the heavy lifting
+        // The contained view controllers do most of the heavy lifting
         viewController?.populateSpeakerBioLabel(speaker.bio)
     }
 
