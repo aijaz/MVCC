@@ -30,11 +30,6 @@ class SpeakerBioViewController: UIViewController {
         guard let _ = speakerNameLabel else { return }
         if let speaker = speaker {
             speakerNameLabel.text = speaker.name
-            if let imagePath = speaker.imagePath {
-                imageView.image = UIImage(named: imagePath)
-            }
-            imageView.layer.cornerRadius = imageView.frame.size.width/2
-            imageView.clipsToBounds = true
 
             if let bio = speaker.bio {
                 let attrStr = NSMutableAttributedString(string: bio)
