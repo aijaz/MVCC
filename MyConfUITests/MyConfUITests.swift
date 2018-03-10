@@ -155,13 +155,5 @@ class MyConfUITests: XCTestCase {
 
     }
 
-//    func testLabels {
-//
-//        let app = XCUIApplication()
-//        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Keynote"]/*[[".cells.staticTexts[\"Keynote\"]",".staticTexts[\"Keynote\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        app/*@START_MENU_TOKEN@*/.buttons["(Bio)"]/*[[".scrollViews.buttons[\"(Bio)\"]",".buttons[\"(Bio)\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//        app.scrollViews.otherElements.staticTexts["@myConf1"].tap()
-//
-//    }
 
 }
