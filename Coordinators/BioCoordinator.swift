@@ -12,11 +12,14 @@ class BioCoordinator: NSObject, Coordinator {
     weak var viewController: SpeakerBioViewController?
 
     let imageCoordinator = ImageCoordinator()
+    let speakerLabelsCoordinator = SpeakerLabelsCoordinator()
 
     var speaker: Speaker! {
         didSet {
             imageCoordinator.imagePath = speaker.imagePath
-
+            speakerLabelsCoordinator.speakerName = speaker.name
+            speakerLabelsCoordinator.twitter = speaker.twitterHandle
+            speakerLabelsCoordinator.website = speaker.website
             configureView()
         }
     }
@@ -26,14 +29,20 @@ class BioCoordinator: NSObject, Coordinator {
     }
 
     func configureView() {
-        guard let speaker = speaker else { return }
-        guard let viewController = viewController else { return }
-
+        // nothing being done here.
+        // The contained view controllers do all the heavy lifting
     }
 
     func registerImageViewController(_ vc: ImageViewController) {
         imageCoordinator.attach(viewController: vc)
         imageCoordinator.imagePath = speaker.imagePath
+    }
+
+    func registerLabelsViewController(_ vc: SpeakerLabelsViewController) {
+        speakerLabelsCoordinator.attach(viewController: vc)
+        speakerLabelsCoordinator.speakerName = speaker.name
+        speakerLabelsCoordinator.twitter = speaker.twitterHandle
+        speakerLabelsCoordinator.website = speaker.website
     }
 
 

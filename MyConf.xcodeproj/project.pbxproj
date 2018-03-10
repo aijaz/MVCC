@@ -22,6 +22,8 @@
 		B40CBEF91F34DC0C000E3814 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CBEF81F34DC0C000E3814 /* Database.swift */; };
 		B40CBEFB1F37F330000E3814 /* SpeakerBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CBEFA1F37F330000E3814 /* SpeakerBioViewController.swift */; };
 		B4392BBA2053AAB7006550AD /* SpeakerBioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4392BB92053AAB7006550AD /* SpeakerBioViewController.xib */; };
+		B4392BBC2053B317006550AD /* SpeakerLabelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4392BBB2053B317006550AD /* SpeakerLabelsViewController.swift */; };
+		B4392BBE2053B366006550AD /* SpeakerLabelsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4392BBD2053B366006550AD /* SpeakerLabelsCoordinator.swift */; };
 		B46A4D6C1F38BA5E001EB530 /* sampleJSONSmall.json in Resources */ = {isa = PBXBuildFile; fileRef = B46A4D6B1F38BA5E001EB530 /* sampleJSONSmall.json */; };
 		B483E0611F3EAF4900C33BCB /* sampleJSONTiny.json in Resources */ = {isa = PBXBuildFile; fileRef = B483E0601F3EAF4900C33BCB /* sampleJSONTiny.json */; };
 		B4B8FC571F3A7DBE00807899 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4B8FC531F3A7DBE00807899 /* 1.jpg */; };
@@ -91,6 +93,8 @@
 		B40CBEF81F34DC0C000E3814 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		B40CBEFA1F37F330000E3814 /* SpeakerBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerBioViewController.swift; sourceTree = "<group>"; };
 		B4392BB92053AAB7006550AD /* SpeakerBioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakerBioViewController.xib; sourceTree = "<group>"; };
+		B4392BBB2053B317006550AD /* SpeakerLabelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerLabelsViewController.swift; sourceTree = "<group>"; };
+		B4392BBD2053B366006550AD /* SpeakerLabelsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerLabelsCoordinator.swift; sourceTree = "<group>"; };
 		B46A4D6B1F38BA5E001EB530 /* sampleJSONSmall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSONSmall.json; sourceTree = "<group>"; };
 		B483E0601F3EAF4900C33BCB /* sampleJSONTiny.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSONTiny.json; sourceTree = "<group>"; };
 		B4B8FC531F3A7DBE00807899 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = SOURCE_ROOT; };
@@ -269,6 +273,7 @@
 				B4FE11ED2052FE16008CEC4B /* SessionCoordinator.swift */,
 				B4FE11F6205349E4008CEC4B /* BioCoordinator.swift */,
 				B4FE11F420534850008CEC4B /* ImageCoordinator.swift */,
+				B4392BBD2053B366006550AD /* SpeakerLabelsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				B4FE11F02053420F008CEC4B /* ImageViewController.swift */,
+				B4392BBB2053B317006550AD /* SpeakerLabelsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -454,12 +460,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4392BBC2053B317006550AD /* SpeakerLabelsViewController.swift in Sources */,
 				B4FE11E520524644008CEC4B /* SectionItem.swift in Sources */,
 				B40CBED51F2E882E000E3814 /* Session.swift in Sources */,
 				B40CBEA61F2E61DE000E3814 /* DetailViewController.swift in Sources */,
 				B40CBED81F2E8C58000E3814 /* Network.swift in Sources */,
 				B4FE11EE2052FE16008CEC4B /* SessionCoordinator.swift in Sources */,
 				B40CBEA41F2E61DE000E3814 /* MasterViewController.swift in Sources */,
+				B4392BBE2053B366006550AD /* SpeakerLabelsCoordinator.swift in Sources */,
 				B4FE11F22053420F008CEC4B /* ImageViewController.swift in Sources */,
 				B4FE11F7205349E4008CEC4B /* BioCoordinator.swift in Sources */,
 				B40CBEA21F2E61DE000E3814 /* AppDelegate.swift in Sources */,

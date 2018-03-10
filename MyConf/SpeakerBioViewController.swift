@@ -25,32 +25,17 @@ class SpeakerBioViewController: UIViewController {
     }
 
     func configureView() {
-        guard let _ = speakerNameLabel else { return }
-        if let speaker = speaker {
-            speakerNameLabel.text = speaker.name
-
-            if let bio = speaker.bio {
-                let attrStr = NSMutableAttributedString(string: bio)
-                let font = UIFont(name: "AvenirNext-Medium", size: 18)
-                attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
-                speakerBioLabel.attributedText = attrStr
-            }
-
-            if let twitter = speaker.twitterHandle {
-                twitterLabel.text = "@\(twitter)"
-            }
-            else {
-                twitterLabel.removeFromSuperview()
-            }
-
-            if let website = speaker.website {
-                webLabel.text = "http://\(website)"
-            }
-            else {
-                webLabel.removeFromSuperview()
-            }
-
-        }
+//        if let speaker = speaker {
+//
+//            if let bio = speaker.bio {
+//                let attrStr = NSMutableAttributedString(string: bio)
+//                let font = UIFont(name: "AvenirNext-Medium", size: 18)
+//                attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
+//                speakerBioLabel.attributedText = attrStr
+//            }
+//
+//
+//        }
     }
 
     override func viewDidLoad() {
@@ -76,6 +61,10 @@ class SpeakerBioViewController: UIViewController {
         if segue.identifier == "embedImage" {
             let dest = segue.destination as! ImageViewController
             coordinator?.registerImageViewController(dest)
+        }
+        else if segue.identifier == "embedLabels" {
+            let dest = segue.destination as! SpeakerLabelsViewController
+            coordinator?.registerLabelsViewController(dest)
         }
     }
 
