@@ -13,11 +13,9 @@ class SpeakerBioViewController: UIViewController {
     var coordinator: BioCoordinator?
 
 
-    @IBOutlet var imageView: UIImageView!
     @IBOutlet var speakerNameLabel: UILabel!
     @IBOutlet var twitterLabel: UILabel!
     @IBOutlet var webLabel: UILabel!
-    @IBOutlet var sessionLabel: UILabel!
     @IBOutlet var speakerBioLabel: UILabel!
 
     var speaker: Speaker? {
@@ -51,8 +49,6 @@ class SpeakerBioViewController: UIViewController {
             else {
                 webLabel.removeFromSuperview()
             }
-
-            sessionLabel.text = speaker.firstSessionName()
 
         }
     }
