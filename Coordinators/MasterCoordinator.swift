@@ -10,6 +10,7 @@ import UIKit
 
 class MasterCoordinator: NSObject, Coordinator {
     weak var viewController: MasterViewController?
+    var sessionCoordinator = SessionCoordinator()
 
     let dataSource = MasterDataSource()
     let delegate = MasterDelegate()
@@ -32,18 +33,12 @@ class MasterCoordinator: NSObject, Coordinator {
         }
     }
 
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = viewController?.tableView.indexPathForSelectedRow {
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.navigationItem.leftBarButtonItem = viewController?.splitViewController?.displayModeButtonItem
-                controller.navigationItem.leftItemsSupplementBackButton = true
-                let sessionCoordinator = SessionCoordinator()
-                sessionCoordinator.attach(viewController: controller)
-                let session = dataSource.sessionTimeSlots[indexPath.section].sessions[indexPath.row]
-                sessionCoordinator.session = session
-            }
+    func handleRowSelected(section: Int, row: Int, usingViewController viewController: DetailViewController?) {
+        if let controller = viewController {
+            sessionCoordinator.attach(viewController: controller)
         }
+        let session = dataSource.sessionTimeSlots[section].sessions[row]
+        sessionCoordinator.session = session
     }
 
 }

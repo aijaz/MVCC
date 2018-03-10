@@ -48,7 +48,13 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // view controllers should not know about flow
         // delegate that responsibility to the coordinator
-        coordinator?.prepare(for: segue, sender: sender)
+        // But in the case of UISplitViewController or custom segues we have no choice
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+            controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            controller.navigationItem.leftItemsSupplementBackButton = true
+            coordinator?.handleRowSelected(section: indexPath.section, row: indexPath.row, usingViewController: controller)
+        }
     }
 }
 
