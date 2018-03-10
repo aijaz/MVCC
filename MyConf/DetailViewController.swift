@@ -61,10 +61,10 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        coordinator?.prepare(for: segue, sender: sender)
+    @IBAction func handleBioTap(_ sender: Any) {
+        coordinator?.handleBioTapped()
     }
-
+    
 }
 
 

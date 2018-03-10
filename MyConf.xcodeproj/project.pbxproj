@@ -21,6 +21,7 @@
 		B40CBEF71F34DAA2000E3814 /* sampleJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = B40CBEF61F34DAA2000E3814 /* sampleJSON.json */; };
 		B40CBEF91F34DC0C000E3814 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CBEF81F34DC0C000E3814 /* Database.swift */; };
 		B40CBEFB1F37F330000E3814 /* SpeakerBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40CBEFA1F37F330000E3814 /* SpeakerBioViewController.swift */; };
+		B4392BBA2053AAB7006550AD /* SpeakerBioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4392BB92053AAB7006550AD /* SpeakerBioViewController.xib */; };
 		B46A4D6C1F38BA5E001EB530 /* sampleJSONSmall.json in Resources */ = {isa = PBXBuildFile; fileRef = B46A4D6B1F38BA5E001EB530 /* sampleJSONSmall.json */; };
 		B483E0611F3EAF4900C33BCB /* sampleJSONTiny.json in Resources */ = {isa = PBXBuildFile; fileRef = B483E0601F3EAF4900C33BCB /* sampleJSONTiny.json */; };
 		B4B8FC571F3A7DBE00807899 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4B8FC531F3A7DBE00807899 /* 1.jpg */; };
@@ -89,6 +90,7 @@
 		B40CBEF61F34DAA2000E3814 /* sampleJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSON.json; sourceTree = "<group>"; };
 		B40CBEF81F34DC0C000E3814 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		B40CBEFA1F37F330000E3814 /* SpeakerBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerBioViewController.swift; sourceTree = "<group>"; };
+		B4392BB92053AAB7006550AD /* SpeakerBioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakerBioViewController.xib; sourceTree = "<group>"; };
 		B46A4D6B1F38BA5E001EB530 /* sampleJSONSmall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSONSmall.json; sourceTree = "<group>"; };
 		B483E0601F3EAF4900C33BCB /* sampleJSONTiny.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sampleJSONTiny.json; sourceTree = "<group>"; };
 		B4B8FC531F3A7DBE00807899 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = SOURCE_ROOT; };
@@ -179,6 +181,7 @@
 				B40CBEA31F2E61DE000E3814 /* MasterViewController.swift */,
 				B40CBEA51F2E61DE000E3814 /* DetailViewController.swift */,
 				B40CBEFA1F37F330000E3814 /* SpeakerBioViewController.swift */,
+				B4392BB92053AAB7006550AD /* SpeakerBioViewController.xib */,
 				B40CBEA71F2E61DE000E3814 /* Main.storyboard */,
 				B40CBEAA1F2E61DE000E3814 /* Assets.xcassets */,
 				B40CBEAC1F2E61DE000E3814 /* LaunchScreen.storyboard */,
@@ -413,6 +416,7 @@
 				B4B8FC671F3B4BD000807899 /* 7.jpg in Resources */,
 				B40CBEAB1F2E61DE000E3814 /* Assets.xcassets in Resources */,
 				B4B8FC681F3B4BD000807899 /* 8.jpg in Resources */,
+				B4392BBA2053AAB7006550AD /* SpeakerBioViewController.xib in Resources */,
 				B4B8FC581F3A7DBE00807899 /* 2.jpg in Resources */,
 				B4B8FC6B1F3B4BD000807899 /* 11.jpg in Resources */,
 				B40CBEA91F2E61DE000E3814 /* Main.storyboard in Resources */,

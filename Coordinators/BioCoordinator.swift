@@ -31,12 +31,9 @@ class BioCoordinator: NSObject, Coordinator {
 
     }
 
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "embedImage" {
-            let dest = segue.destination as! ImageViewController
-            imageCoordinator.attach(viewController: dest)
-            imageCoordinator.speaker = speaker
-        }
+    func registerImageViewController(_ vc: ImageViewController) {
+        imageCoordinator.attach(viewController: vc)
+        imageCoordinator.speaker = speaker
     }
 
 

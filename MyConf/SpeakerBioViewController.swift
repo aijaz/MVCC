@@ -76,11 +76,11 @@ class SpeakerBioViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "showBio" {
-            let dest = segue.destination as! SpeakerBioViewController
-            dest.speaker = speaker
+        // embed segues are not for flow, so it's ok to use prepare here
+        if segue.identifier == "embedImage" {
+            let dest = segue.destination as! ImageViewController
+            coordinator?.registerImageViewController(dest)
         }
-        coordinator?.prepare(for: segue, sender: sender)
     }
 
 
