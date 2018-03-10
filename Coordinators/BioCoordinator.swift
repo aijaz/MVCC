@@ -29,8 +29,8 @@ class BioCoordinator: NSObject, Coordinator {
     }
 
     func configureView() {
-        // nothing being done here.
-        // The contained view controllers do all the heavy lifting
+        // The contained view controllers do some the heavy lifting
+        viewController?.populateSpeakerBioLabel(speaker.bio)
     }
 
     func registerImageViewController(_ vc: ImageViewController) {

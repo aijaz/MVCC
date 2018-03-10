@@ -13,18 +13,11 @@ class SpeakerBioViewController: UIViewController {
     var coordinator: BioCoordinator?
 
 
-    @IBOutlet var speakerNameLabel: UILabel!
-    @IBOutlet var twitterLabel: UILabel!
-    @IBOutlet var webLabel: UILabel!
     @IBOutlet var speakerBioLabel: UILabel!
 
-    var speaker: Speaker? {
-        didSet {
-            configureView()
-        }
-    }
 
-    func configureView() {
+//    func configureView() {
+//        guard let speakerBioLabel = speakerBioLabel else { return }
 //        if let speaker = speaker {
 //
 //            if let bio = speaker.bio {
@@ -36,11 +29,11 @@ class SpeakerBioViewController: UIViewController {
 //
 //
 //        }
-    }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
+        coordinator?.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
@@ -49,7 +42,16 @@ class SpeakerBioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func populateSpeakerBioLabel(_ text: String?) {
+        guard let speakerBioLabel = speakerBioLabel else { return }
+        if let text = text {
+            let attrStr = NSMutableAttributedString(string: text)
+            let font = UIFont(name: "AvenirNext-Medium", size: 18)
+            attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
+            speakerBioLabel.attributedText = attrStr
+        }
 
+    }
 
     // MARK: - Navigation
 

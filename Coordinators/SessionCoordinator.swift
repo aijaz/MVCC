@@ -38,7 +38,6 @@ class SessionCoordinator: NSObject, Coordinator {
     func handleBioTapped() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SpeakerBio") as! SpeakerBioViewController
-        vc.speaker = session.speaker // DELETE ME
         viewController?.navigationController?.pushViewController(vc, animated: true)
         bioCoordinator = BioCoordinator()
         bioCoordinator?.attach(viewController: vc)
