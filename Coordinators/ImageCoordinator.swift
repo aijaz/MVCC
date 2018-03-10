@@ -12,7 +12,7 @@ import UIKit
 class ImageCoordinator: NSObject, Coordinator {
     weak var viewController: ImageViewController?
 
-    var speaker: Speaker! {
+    var imagePath: String! {
         didSet {
             configureView()
         }
@@ -23,12 +23,12 @@ class ImageCoordinator: NSObject, Coordinator {
     }
 
     func configureView() {
-        guard let speaker = speaker else { return }
+        guard let imagePath = imagePath else { return }
         guard let viewController = viewController else { return }
         if !viewController.readyToPopulateViews() {
             return
         }
-        viewController.populateSessionImage(speaker.imagePath)
+        viewController.populateSessionImage(imagePath)
     }
 
 

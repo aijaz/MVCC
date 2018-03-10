@@ -15,7 +15,7 @@ class BioCoordinator: NSObject, Coordinator {
 
     var speaker: Speaker! {
         didSet {
-            imageCoordinator.speaker = speaker
+            imageCoordinator.imagePath = speaker.imagePath
 
             configureView()
         }
@@ -33,7 +33,7 @@ class BioCoordinator: NSObject, Coordinator {
 
     func registerImageViewController(_ vc: ImageViewController) {
         imageCoordinator.attach(viewController: vc)
-        imageCoordinator.speaker = speaker
+        imageCoordinator.imagePath = speaker.imagePath
     }
 
 
