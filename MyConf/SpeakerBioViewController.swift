@@ -14,7 +14,6 @@ class SpeakerBioViewController: UIViewController {
     @IBOutlet var speakerNameLabel: UILabel!
     @IBOutlet var twitterLabel: UILabel!
     @IBOutlet var webLabel: UILabel!
-    @IBOutlet var sessionLabel: UILabel!
     @IBOutlet var speakerBioLabel: UILabel!
 
     var speaker: Speaker? {
@@ -48,13 +47,11 @@ class SpeakerBioViewController: UIViewController {
             }
 
             if let website = speaker.website {
-                webLabel.text = "@\(website)"
+                webLabel.text = "https://\(website)"
             }
             else {
                 webLabel.removeFromSuperview()
             }
-
-            sessionLabel.text = speaker.firstSessionName()
 
         }
     }
