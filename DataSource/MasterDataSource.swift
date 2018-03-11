@@ -19,6 +19,8 @@ class MasterDataSource: NSObject, UITableViewDataSource {
         var lastDateSeen = ""
         sessionTimeSlots.removeAll(keepingCapacity: true)
 
+        NSLog("Refreshing view models \(allSessions.count)")
+
         for session in allSessions {
             let sessionDate = session.startDate
             if sessionDate != lastDateSeen {
@@ -29,6 +31,7 @@ class MasterDataSource: NSObject, UITableViewDataSource {
             }
             sessionTimeSlots[currentIndex].sessions.append(session)
         }
+        NSLog("Refreshed view models sessions \(sessionTimeSlots.count) currentIndex = \(currentIndex)")
     }
 
 

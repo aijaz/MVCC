@@ -24,6 +24,27 @@ class MyConfTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        let application = UIApplication.shared
+        let appDelegate = application.delegate as! AppDelegate
+        let mc = appDelegate.masterCoordinator
+
+        mc.handleRowSelected(section: 1, row: 0, usingViewController: nil)
+        mc.sessionCoordinator.handleBioTapped()
+        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf1")
+
+        mc.handleRowSelected(section: 3, row: 0, usingViewController: nil)
+        mc.sessionCoordinator.handleBioTapped()
+        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf2")
+
+        mc.handleRowSelected(section: 3, row: 1, usingViewController: nil)
+        mc.sessionCoordinator.handleBioTapped()
+        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf13")
+
+        mc.handleRowSelected(section: 3, row: 2, usingViewController: nil)
+        mc.sessionCoordinator.handleBioTapped()
+        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf4")
+
     }
     
     func testPerformanceExample() {
