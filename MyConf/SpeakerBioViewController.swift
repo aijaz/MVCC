@@ -35,7 +35,7 @@ class SpeakerBioViewController: UIViewController {
             if let bio = speaker.bio {
                 let attrStr = NSMutableAttributedString(string: bio)
                 let font = UIFont(name: "AvenirNext-Medium", size: 18)
-                attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
+                attrStr.addAttribute(NSAttributedStringKey.font, value: font!, range: NSMakeRange(0, attrStr.length))
                 speakerBioLabel.attributedText = attrStr
             }
 
