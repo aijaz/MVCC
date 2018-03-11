@@ -40,7 +40,7 @@ class MasterTableViewCell: UITableViewCell {
         }
 
         let bgColorView = UIView()
-        bgColorView.backgroundColor = UIColor(colorLiteralRed: 200/256.0, green: 200/256.0, blue: 193/256.0, alpha: 1.0)
+        bgColorView.backgroundColor = UIColor(red: 128/256.0, green: 200/256.0, blue: 193/256.0, alpha: 1.0)
         selectedBackgroundView = bgColorView
     }
 

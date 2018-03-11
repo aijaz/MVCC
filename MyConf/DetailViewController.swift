@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
         let desc = sessionDescription ?? "Session Details Coming Soon"
         let attrStr = NSMutableAttributedString(string: desc)
         let font = UIFont(name: "AvenirNext-Medium", size: 18)
-        attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
+        attrStr.addAttribute(NSAttributedStringKey.font, value: font!, range: NSMakeRange(0, attrStr.length))
         sessionDescriptionLabel.attributedText = attrStr
     }
 

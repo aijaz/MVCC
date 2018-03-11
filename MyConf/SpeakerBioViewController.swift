@@ -16,20 +16,6 @@ class SpeakerBioViewController: UIViewController {
     @IBOutlet var speakerBioLabel: UILabel!
 
 
-//    func configureView() {
-//        guard let speakerBioLabel = speakerBioLabel else { return }
-//        if let speaker = speaker {
-//
-//            if let bio = speaker.bio {
-//                let attrStr = NSMutableAttributedString(string: bio)
-//                let font = UIFont(name: "AvenirNext-Medium", size: 18)
-//                attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
-//                speakerBioLabel.attributedText = attrStr
-//            }
-//
-//
-//        }
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +33,7 @@ class SpeakerBioViewController: UIViewController {
         if let text = text {
             let attrStr = NSMutableAttributedString(string: text)
             let font = UIFont(name: "AvenirNext-Medium", size: 18)
-            attrStr.addAttribute(NSFontAttributeName, value: font!, range: NSMakeRange(0, attrStr.length))
+            attrStr.addAttribute(NSAttributedStringKey.font, value: font!, range: NSMakeRange(0, attrStr.length))
             speakerBioLabel.attributedText = attrStr
         }
 
