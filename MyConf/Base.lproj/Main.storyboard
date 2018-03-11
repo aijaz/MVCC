@@ -93,7 +93,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fd-Op-x95">
-                                        <rect key="frame" x="158" y="51.5" width="32" height="33"/>
+                                        <rect key="frame" x="158" y="51" width="32" height="33"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-MediumItalic" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="(Bio)">
                                             <color key="titleColor" red="0.33281771300000002" green="0.4923659581" blue="0.33163176329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,6 +113,7 @@
                                     <constraint firstItem="1Fd-Op-x95" firstAttribute="baseline" secondItem="Emc-3i-Wac" secondAttribute="baseline" id="V6u-Ng-5Si"/>
                                     <constraint firstItem="9QR-fj-Dy5" firstAttribute="width" secondItem="27v-gK-VcM" secondAttribute="width" constant="-16" id="f0q-j4-Ycz"/>
                                     <constraint firstItem="1Fd-Op-x95" firstAttribute="leading" secondItem="Emc-3i-Wac" secondAttribute="trailing" constant="16" id="fiN-rV-jm8"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1Fd-Op-x95" secondAttribute="trailing" constant="10" id="gpO-qd-ZLi"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -196,10 +197,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZVU-aR-QLd">
-                                            <rect key="frame" x="16" y="17" width="335" height="78.5"/>
+                                            <rect key="frame" x="16" y="17" width="335" height="80"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQD-2a-bCy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="78.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="AQk-Vc-bNj"/>
                                                         <constraint firstAttribute="width" constant="80" id="P7G-fr-c7f"/>
@@ -230,8 +231,8 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.84749846159999997" green="0.98672166139999995" blue="0.83847967919999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="ZVU-aR-QLd" secondAttribute="bottom" constant="1.5" id="4d1-0p-dTo"/>
-                                        <constraint firstItem="ZVU-aR-QLd" firstAttribute="top" secondItem="zj9-0E-tNI" secondAttribute="topMargin" constant="6" id="TvE-kV-gmj"/>
+                                        <constraint firstItem="JQD-2a-bCy" firstAttribute="top" secondItem="zj9-0E-tNI" secondAttribute="top" constant="17" id="6tk-cT-PFF"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JQD-2a-bCy" secondAttribute="bottom" constant="5" id="FcB-0D-TsU"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="ZVU-aR-QLd" secondAttribute="trailing" constant="8" id="WbH-Sm-0pe"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="ZVU-aR-QLd" secondAttribute="leading" id="z29-je-2OB"/>
                                     </constraints>
@@ -252,7 +253,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-630"/>
+            <point key="canvasLocation" x="708.5" y="-630.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
