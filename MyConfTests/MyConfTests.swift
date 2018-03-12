@@ -22,99 +22,96 @@ class MyConfTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-
         let application = UIApplication.shared
         let appDelegate = application.delegate as! AppDelegate
         let mc = appDelegate.masterCoordinator
 
         mc.handleRowSelected(section: 1, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf1")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf1")
 
         mc.handleRowSelected(section: 3, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf2")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf2")
 
         mc.handleRowSelected(section: 3, row: 1, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf13")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf13")
 
         mc.handleRowSelected(section: 3, row: 2, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf4")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf4")
 
 
 
         mc.handleRowSelected(section: 5, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf5")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf5")
 
         mc.handleRowSelected(section: 5, row: 1, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf6")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf6")
 
         mc.handleRowSelected(section: 5, row: 2, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf7")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf7")
 
 
 
         mc.handleRowSelected(section: 7, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf14")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf14")
 
 
 
         mc.handleRowSelected(section: 9, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf8")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf8")
 
         mc.handleRowSelected(section: 9, row: 1, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf9")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf9")
 
         mc.handleRowSelected(section: 9, row: 2, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf10")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf10")
 
 
 
 
         mc.handleRowSelected(section: 11, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf11")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf11")
 
         mc.handleRowSelected(section: 11, row: 1, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf12")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf12")
 
         mc.handleRowSelected(section: 11, row: 2, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf3")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf3")
 
 
 
 
         mc.handleRowSelected(section: 13, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf14")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf14")
 
         mc.handleRowSelected(section: 13, row: 1, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf1")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf1")
 
         mc.handleRowSelected(section: 13, row: 2, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf2")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf2")
 
 
 
 
         mc.handleRowSelected(section: 15, row: 0, usingViewController: nil)
         mc.sessionCoordinator.handleBioTapped()
-        XCTAssert(mc.sessionCoordinator.bioCoordinator?.speakerLabelsCoordinator.twitter == "myConf13")
+        XCTAssert(mc.sessionCoordinator.bioCoordinator.speakerLabelsCoordinator.twitter == "myConf13")
 
 
 
