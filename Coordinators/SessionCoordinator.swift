@@ -10,7 +10,7 @@ import UIKit
 
 class SessionCoordinator: NSObject, Coordinator {
     weak var viewController: DetailViewController?
-    var bioCoordinator: BioCoordinator?
+    var bioCoordinator = BioCoordinator()
 
     var session: Session! {
         didSet {
@@ -39,9 +39,8 @@ class SessionCoordinator: NSObject, Coordinator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "SpeakerBio") as! SpeakerBioViewController
         viewController?.navigationController?.pushViewController(vc, animated: true)
-        bioCoordinator = BioCoordinator()
-        bioCoordinator?.attach(viewController: vc)
-        bioCoordinator?.speaker = session.speaker
+        bioCoordinator.attach(viewController: vc)
+        bioCoordinator.speaker = session.speaker
     }
 
 

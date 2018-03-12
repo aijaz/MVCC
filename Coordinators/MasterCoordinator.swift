@@ -23,7 +23,6 @@ class MasterCoordinator: NSObject, Coordinator {
         delegate.dataSource = dataSource
         viewController?.tableView.dataSource = dataSource
         viewController?.tableView.delegate = delegate
-
     }
 
     func getData() {
